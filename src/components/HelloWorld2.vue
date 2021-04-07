@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <h1>{{ name }}</h1>
     <ul>
-        <li v-form="(item, idx) in items" :key="idx">
+        <li v-for="(item, idx) in items" :key="idx">
             {{ item.text }}
             <button @click="removeItem(idx)">Remove Item</button>
         </li>
@@ -18,21 +18,21 @@ export default {
   props: {
     msg: String
   },
-  data() {
+  data(){
       return{
-          name: 'gud',
-          items: [
+          name : 'gud',
+          items : [
               {
-                  value: '1',
-                  text: 'item 1'
+                  value : '1',
+                  text : 'item 1'
               },
               {
-                  value: '2',
-                  text: 'item 2'
+                  value : '2',
+                  text : 'item 2'
               },
               {
-                  value: '3',
-                  text: 'item 3'
+                  value : '3',
+                  text : 'item 3'
               }
           ]
       }
@@ -42,7 +42,7 @@ export default {
           let idx = this.items.length + 1;
           this.items.push({
               value : idx,
-              text : 'item' + idx
+              text : 'item ' + idx
           });
       },
       removeItem(idx){
