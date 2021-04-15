@@ -5,10 +5,12 @@
     <ul>
         <li v-for="(item, idx) in items" :key="idx">
             {{ item.text }}
-            <button @click="ClearName(idx)">Clear Name</button>
+            <button @click="removeItem(idx)" class="btn btn-primary">Remove Item</button>
         </li>
     </ul>
-    <button @click="changeName">Change Name</button>
+    <button @click="changeItem" class="btn btn-danger">Change Item</button>
+    <br><br>
+    <button @click="changeName" class="btn btn-name">Change Name</button>
   </div>
 </template>
 
@@ -39,7 +41,18 @@ export default {
   },
   methods : {
       changeName(){
-          this.name = 'othername';
+          this.name = 'not gud';
+      },
+      changeItme(){
+        let n = [
+          {
+            value: 10,
+            text: 'new item'
+          }
+        ];
+      },
+      removeItem(idx){
+        this.item.splice(idx, 1);
       }
   }
 }
