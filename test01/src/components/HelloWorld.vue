@@ -43,16 +43,18 @@ export default {
       changeName(){
           this.name = 'not gud';
       },
-      changeItme(){
+      changeItem(){
         let n = [
           {
             value: 10,
             text: 'new item'
           }
         ];
+
+        this.items = n;
       },
       removeItem(idx){
-        this.item.splice(idx, 1);
+        this.items.splice(idx, 1);
       }
   }
 }

@@ -14,7 +14,7 @@ export default {
   },
   data(){
     return{
-      item:[
+      items:[
         {
           image: 'http://source.unsplash.com/random?q=1',
           title: 'title',
