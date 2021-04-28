@@ -14,55 +14,50 @@
         </div>
         <div class="card-right-middle card-body">
             <p class="card-text">{{item.contents}}</p>
-            <div class="card-img-box">
+            <div v-if="Math.random() < 0.8" class="card-img-box">
                 <img class="card-img-top" @click="imgResize" :src="item.image">
             </div>
-            
         </div>
-        <div class="card-right-bottom">
-            <a href="#" class="twitter-bt bt01" @click="btReply">
-                <img src="https://img.icons8.com/small/32/000000/twitter-reply.png"/>
-            </a>
-            <a href="#" class="twitter-bt bt02" @click="btRetweet">
-                <img src="https://img.icons8.com/small/32/000000/retweet.png"/>
-            </a>
-            <a href="#" class="twitter-bt bt03" @click="btLike">
-                <img src="https://img.icons8.com/material-outlined/32/000000/filled-like.png"/>
-            </a>
-            <a href="#" class="twitter-bt bt04" @click="btShare">
-                <img src="https://img.icons8.com/small/32/000000/share-3.png"/>
-            </a>
-        </div>
+        <Buttons v-for="(item,idx) in items" :key="idx" :item="item"/>
       </div>
   </div>
 </template>
 
 <script>
+import Buttons from '@/components/card/Buttons.vue'
+
 export default {
   name: 'Card',
+  components: {
+    Buttons
+  },
   props: {
     item: Object
   },
-  methods : {
-      imgResize(){
-          alert('imgResize clicked');
-      },
-      btMore(){
-          alert('btMore clicked');
-      },
-      btReply(){
-          alert('btReply clicked');
-      },
-      btRetweet(){
-          alert('btRetweet clicked');
-      },
-      btLike(){
-          alert('btLike clicked');
-      },
-      btShare(){
-          alert('btShare clicked');
-      }
-  }
+  data(){
+    return {
+        items : [
+            {
+                bt01img: 'https://img.icons8.com/small/32/000000/twitter-reply.png',
+                bt02img: 'https://img.icons8.com/small/32/000000/retweet.png',
+                bt03img: 'https://img.icons8.com/material-outlined/32/000000/filled-like.png',
+                bt04img: 'https://img.icons8.com/small/32/000000/share-3.png'
+            }
+        ]
+    }
+  },
+//   호출할 함수
+  methods:{
+    //  getUnits: function() {
+    //     //  var randomNum = Math.random();
+    //     //  console.log(randomNum);
+    //  }
+ },
+//  페이지로드시 vue.js 함수를 호출
+ beforeMount(){
+    // this.getUnits();
+ }
+  
 }
 </script>
 
@@ -163,18 +158,6 @@ export default {
     height: auto;
 }
 
-.card-right-bottom{
-    /* background-color:burlywood; */
-    margin: 2px 10px 0;
-    padding: 0;
-    padding-bottom: 10px;
-    width: 450px;
-    display: flex;
-    justify-content: space-between;
-}
 
-.twitter-bt img{
-    width: 17px;
-}
 
 </style>
