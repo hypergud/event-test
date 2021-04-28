@@ -45,18 +45,7 @@ export default {
             }
         ]
     }
-  },
-//   호출할 함수
-  methods:{
-    //  getUnits: function() {
-    //     //  var randomNum = Math.random();
-    //     //  console.log(randomNum);
-    //  }
- },
-//  페이지로드시 vue.js 함수를 호출
- beforeMount(){
-    // this.getUnits();
- }
+  }
   
 }
 </script>
