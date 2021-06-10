@@ -24,7 +24,7 @@
                             <h4 class="card-text">Phone: {{items.phone}}</h4>
                             <h4 class="card-text">Email: {{items.email}}</h4>
                             <h4 class="card-text">Location: {{items.location.state + ', ' + items.location.street + ', ' + items.location.city + ', ' + items.location.timezone + ', ' + items.location.country}}</h4>
-                            <h4 class="card-time">가입일: {{items.registerDate}}</h4>
+                            <h4 class="card-time">Register Date: {{items.registerDate}}</h4>
                     </div>
                 </div>
             </li>
