@@ -48,7 +48,6 @@ export default{
     },
     mounted(){
         //ajax with axios 
-        // axios.get('https://dummyapi.io/data/api/post?limit=10', {
             axios.get('https://dummyapi.io/data/api/user/0F8JIqi4zwvb77FGz6Wt', {
             'headers' : {
                 "app-id" : '60c24918d4c558c1cbd6bc74'
@@ -97,7 +96,6 @@ ul, li{
     border-radius: 0;
     width: 600px;
     border: 1px solid rgb(218, 218, 218);
-    /* border-top-width: 0px; */
     /* background-color: azure; */
 }
 

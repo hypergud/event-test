@@ -24,7 +24,6 @@
             <li v-for="(item,idx) in items" :key="idx" :item="item">
                 <div class="card">
                     <div class="block card-left">
-                        <!-- <router-link style="text-decoration: none" to="/detail/:id" > -->
                         <router-link style="text-decoration: none" to="/detail/:id" >
                         <div class="profile">
                             <img class="card-profile-img" :src="item.owner.picture" alt="Card profile image">
@@ -72,7 +71,6 @@
 
 <script>
 import axios from 'axios';
-// import Buttons from '@/components/Buttons.vue';
 
 export default {
     name: 'TwitterList',
@@ -101,7 +99,6 @@ export default {
       }
   },
     components: {
-        // Buttons
     },
     data(){
         return{  
@@ -119,8 +116,6 @@ export default {
     mounted(){
         //ajax with axios 
         axios.get('https://dummyapi.io/data/api/user/0F8JIqi4zwvb77FGz6Wt/post?limit=10', {
-        // axios.get('https://dummyapi.io/data/api/post?limit=10', {
-            // axios.get('https://dummyapi.io/data/api/user?limit=10', {
             'headers' : {
                 "app-id" : '60c24918d4c558c1cbd6bc74'
             }
@@ -167,7 +162,6 @@ input {
     width: 500px;
     width: 400px;
     height: 45px;
-    /* padding-top: 20px; */
     /* background-color: pink; */
 }
 input:focus {outline:none;}
@@ -175,18 +169,14 @@ input:focus {outline:none;}
 .bt-twit{
     border: none;
     background-color: #00caee;
-    width: 80px;
-    height: 30px;
     border-radius: 30%;
     margin-left: auto;
-    /* border:5px solid blue; */
   border-radius: 40px;
   color:black;
   padding: 10px; 
   width: 80px;
   height: 30px; 
   margin-top: 10px;
-  /* cursor: pointer; */
   opacity: 0.5;
 }
 
@@ -218,7 +208,6 @@ input:focus {outline:none;}
     height: 50px; 
     border-radius: 70%;
     overflow: hidden;
-    position: absolute;
     position: relative;
     left: 15%;
     margin: 10px 0;
@@ -231,14 +220,11 @@ input:focus {outline:none;}
 }
 
 .card-right{
-    /* width: 510px; */
-    /* width: 520px; */
     height: auto;
     /* background-color: green; */
 }
 
 .card-right-top{
-    /* height: 20px; */
     height: 20px;
     /* background-color: pink; */
     margin: 10px 10px 0;
@@ -278,7 +264,6 @@ input:focus {outline:none;}
     /* background-color: violet; */
     margin: 10px 10px 0px;
     padding: 0;
-    /* padding-bottom: 5px; */
     width: 505px;
 }
 
@@ -301,7 +286,6 @@ input:focus {outline:none;}
 .card-img-top{
     width: 505px;
     height: auto;
-    /* object-fit:cover; */
 }
 
 .card-img-top img{
@@ -310,7 +294,6 @@ input:focus {outline:none;}
 
 .card-right-bottom{
     /* background-color:burlywood; */
-    margin: 2px 10px 0;
     margin: 6px 10px 0;
     padding: 0;
     padding-bottom: 5px;
@@ -327,7 +310,6 @@ input:focus {outline:none;}
 .btlike{
     display: flex;
     flex-direction: row;
-    /* float: right; */
 }
 
 .btlike h5{
